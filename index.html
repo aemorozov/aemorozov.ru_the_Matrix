@@ -6,16 +6,20 @@
     <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles/styles.css" type="text/css" />
+    <link rel="stylesheet" href="styles/global.css" type="text/css" />
+    <link rel="stylesheet" href="styles/start.css" type="text/css" />
   </head>
   <body>
     <div class="start">
-      <img src="img/starts-logo.png" alt="Logo" title="starts logotype" />
-      <h1 class="start-title">This site can’t be reached</h1>
-      <p class="start-p">Check if there is a typo in aemorozov.ru.com.</p>
-      <p class="start-p">If spelling is correct, <a>try running Windows Network Diagnostics</a>.</p>
-      <p class="start-p">DNS_PROBE_FINISHED_NXDOMAIN</p>
-      <button class="start-button">Reload</button>
+      <img src="img/starts-logo.png" alt="Logo" title="starts logotype" class="start-logo" />
+      <h1 class="start-title starts-letters">This site can’t be reached</h1>
+      <p class="start-p starts-letters">Check if there is a typo in aemorozov.ru.</p>
+      <span class="start-p starts-letters"> If spelling is correct, </span
+      ><a href="#" class="start-a starts-letters">try running Windows Network Diagnostics</a
+      ><span class="start-p starts-letters">.</span>
+
+      <p class="start-p-little starts-letters">DNS_PROBE_FINISHED_NXDOMAIN</p>
+      <button class="start-button" onclick="location.reload()">Reload</button>
     </div>
     <script src="js/app.js" async defer></script>
   </body>

@@ -1,0 +1,81 @@
+.start {
+    width: max-content;
+    margin: 0 auto 0 50%;
+    padding-top: 15vh;
+    transform: translateX(-60%);
+}
+
+.start-logo {
+    margin-bottom: 40px;
+}
+
+.start-title {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 1.25em;
+    color: rgb(32, 33, 36);
+    margin-top: 0px;
+}
+
+.start-p {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 0.95em;
+    line-height: 1.6em;
+    color: rgb(95, 99, 104);
+}
+
+.start-a {
+    color:rgb(26, 115, 232);
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    line-height: 1.6em;
+    
+}
+
+.start-p-little {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: .75em;
+    line-height: 1.6em;
+    color: rgb(95, 99, 104);
+    margin-bottom: 0;
+}
+
+.start-button {
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0;
+    padding: 8px 16px;
+    color: white;
+    background-color: rgb(26, 115, 232);
+    margin-top: 51px;
+}
+
+.glitch-up {
+    position: relative;
+    top: 10px;
+}
+
+.glitch-down {
+    position: relative;
+    top: -12px;
+}
+
+span {
+    position: relative;
+}
+
+@media screen and (max-width: 800px) {
+    .start {
+        margin: 0 auto 0 60%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .start {
+        margin: 0 auto 0 45%;
+        width: 80vw;
+        transform: translateX(-40%);
+    }
+}
