@@ -1,9 +1,9 @@
 startScreen()
 
-function startScreen(): void {
+function startScreen() {
 
     const letters = document.querySelectorAll('.starts-letters')
-    const symbolIDsForAnimation = [];
+    const symbolIDsForAnimation: string[] = [];
     const rowForAnimation = 'row-0';
     const prefixForRow = 'row-'
     const prefixForID = 'id-'
@@ -25,7 +25,7 @@ function startScreen(): void {
 
     takeOnlyFirstLineForAnimation()
 
-    let IDsForGlitch = []
+    let IDsForGlitch: string[] = []
 
     const glitchEffect = setInterval(glitch, timeoutForStartGlitch)
 
@@ -36,9 +36,7 @@ function startScreen(): void {
     // Functions
 
     function innerNewHTMLAndTags() {
-
         for (let rowNumber = 0; rowNumber < letters.length; rowNumber++) {
-
             const textContent = letters[rowNumber].textContent;
             if (textContent === null) return console.log('not text for glitch')
             const textContentAfterSplit = textContent.split("");
@@ -68,7 +66,6 @@ function startScreen(): void {
                 symbolIDsForAnimation.push(allSymbols[i].id)
             }
         }
-        // console.log(symbolIDsForAnimation)
         return symbolIDsForAnimation
     }
 
@@ -96,19 +93,15 @@ function startScreen(): void {
                     element.style.background = ''
                 }, timeoutRevertGlitch)
             }
-
         }
     }
 
     function glitch() {
-
         const glitch = setInterval(() => {
             getRandomNumber()
             findElementsAndAddStyles()
 
         }, timeoutForGlitch)
-
         setTimeout(() => clearInterval(glitch), timeoutForStopGlitch)
     }
-
 }
