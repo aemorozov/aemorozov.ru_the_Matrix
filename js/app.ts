@@ -1,6 +1,6 @@
 startScreen()
 
-function startScreen() {
+function startScreen(): void {
 
     const letters = document.querySelectorAll('.starts-letters')
     const symbolIDsForAnimation = [];
@@ -14,6 +14,8 @@ function startScreen() {
     const timeoutRevertGlitch = timeoutForGlitch - 1
     const timeoutForStopGlitch = 600
     const timeoutForClearInterval = 2000
+    const howMuchSymbolsForOneGlitch = 5
+    const isLink = 'a'
 
     let symbolID = 0;
 
@@ -38,13 +40,14 @@ function startScreen() {
         for (let rowNumber = 0; rowNumber < letters.length; rowNumber++) {
 
             const textContent = letters[rowNumber].textContent;
+            if (textContent === null) return console.log('not text for glitch')
             const textContentAfterSplit = textContent.split("");
             const textContentLength = textContent.length;
 
             letters[rowNumber].innerHTML = "";
 
             for (let i = 0; i < textContentLength; i++) {
-                if (letters[rowNumber].localName == 'a') {
+                if (letters[rowNumber].localName === isLink) {
                     letters[
                         rowNumber
                     ].innerHTML += `<a href="#" class="start-a" data-row='${prefixForRow}${rowNumber}' id="${prefixForID}${symbolID}">${textContentAfterSplit[i]}</a>`;
@@ -60,8 +63,8 @@ function startScreen() {
     }
 
     function takeOnlyFirstLineForAnimation() {
-        for (i = 0; i < allSymbols.length; i++) {
-            if (allSymbols[i].dataset.row == rowForAnimation) {
+        for (let i = 0; i < allSymbols.length; i++) {
+            if (allSymbols[i].dataset.row === rowForAnimation) {
                 symbolIDsForAnimation.push(allSymbols[i].id)
             }
         }
@@ -71,24 +74,25 @@ function startScreen() {
 
     function getRandomNumber() {
         IDsForGlitch = []
-        for (i = 0; i < 5; i++) {
+        for (let i = 0; i < howMuchSymbolsForOneGlitch; i++) {
             IDsForGlitch.push(`${prefixForID}` + Math.round(Math.random() * symbolIDsForAnimation.length))
         } return IDsForGlitch
     }
 
     function findElementsAndAddStyles() {
-        for (i = 0; i < IDsForGlitch.length; i++) {
+        for (let i = 0; i < IDsForGlitch.length; i++) {
             const IDForGlitch = `${IDsForGlitch[i]}`
 
             if (symbolIDsForAnimation.indexOf(IDForGlitch) != -1) {
                 const element = document.getElementById(IDForGlitch)
+                if (element === null) return
                 element.style.top = margins[Math.round(Math.random() * margins.length)]
                 element.style.left = margins[Math.round(Math.random() * margins.length)]
                 element.style.background = colors[Math.round(Math.random() * colors.length)]
 
                 setTimeout(() => {
-                    element.style.top = 0
-                    element.style.left = 0
+                    element.style.top = '0'
+                    element.style.left = '0'
                     element.style.background = ''
                 }, timeoutRevertGlitch)
             }
@@ -106,7 +110,5 @@ function startScreen() {
 
         setTimeout(() => clearInterval(glitch), timeoutForStopGlitch)
     }
-
-
 
 }

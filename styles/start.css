@@ -1,8 +1,12 @@
 .start {
     width: max-content;
     margin: 0 auto 0 50%;
-    padding-top: 15vh;
+    padding-top: 11vh;
+    padding-left: 136px;
     transform: translateX(-60%);
+    transition: 2s cubic-bezier(1, 0.01, 0.75, 0.79);
+
+    /* transform: translateX(-60%) scale(600);*/
 }
 
 .start-logo {
