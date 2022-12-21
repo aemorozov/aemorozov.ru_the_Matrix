@@ -11,6 +11,7 @@ function printingText() {
     var startA = document.querySelector('.start-a');
     var startPLittle = document.querySelector('.start-p-little');
     var startButton = document.querySelector('.start-button');
+    var textContent = document.querySelector('.text-content');
     setTimeout(animation, timeForStartAnimation);
     // Functions
     function animation() {
@@ -38,15 +39,16 @@ function printingText() {
         }, timeForAddNewText);
     }
     function shift() {
-        if (startTitle && startP && startA && startPLittle && startButton && img) {
-            startTitle.style.marginLeft = '-150vw';
-            startA.style.marginLeft = '-150vw';
-            startPLittle.style.marginLeft = '-150vw';
-            startButton.style.marginLeft = '-150vw';
+        if (startTitle && startP && startA && startPLittle && startButton && img && textContent) {
+            textContent.style.marginLeft = '-150vw';
+            // startTitle.style.marginLeft = '-150vw'
+            // startA.style.marginLeft = '-150vw'
+            // startPLittle.style.marginLeft = '-150vw'
+            // startButton.style.marginLeft = '-150vw'
             img.style.marginLeft = '45%';
-            for (var i = 0; i < startP.length; i++) {
-                startP[i].style.marginLeft = '-150vw';
-            }
+            // for(let i = 0; i < startP.length; i++) {
+            //     startP[i].style.marginLeft = '-150vw'
+            // }
         }
     }
 }

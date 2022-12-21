@@ -13,6 +13,7 @@ function printingText() {
     const startA: HTMLHtmlElement | null = document.querySelector('.start-a')
     const startPLittle: HTMLHtmlElement | null = document.querySelector('.start-p-little')
     const startButton: HTMLHtmlElement | null = document.querySelector('.start-button')
+    const textContent: HTMLHtmlElement | null = document.querySelector('.text-content')
     
     setTimeout(animation, timeForStartAnimation)
 
@@ -44,15 +45,16 @@ function printingText() {
     }
 
     function shift() {
-        if (startTitle && startP && startA && startPLittle && startButton && img) {
-            startTitle.style.marginLeft = '-150vw'
-            startA.style.marginLeft = '-150vw'
-            startPLittle.style.marginLeft = '-150vw'
-            startButton.style.marginLeft = '-150vw'
+        if (startTitle && startP && startA && startPLittle && startButton && img && textContent) {
+            textContent.style.marginLeft = '-150vw'
+            // startTitle.style.marginLeft = '-150vw'
+            // startA.style.marginLeft = '-150vw'
+            // startPLittle.style.marginLeft = '-150vw'
+            // startButton.style.marginLeft = '-150vw'
             img.style.marginLeft = '45%'
-            for(let i = 0; i < startP.length; i++) {
-                startP[i].style.marginLeft = '-150vw'
-            }
+            // for(let i = 0; i < startP.length; i++) {
+            //     startP[i].style.marginLeft = '-150vw'
+            // }
         }
     }
 }
