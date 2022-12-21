@@ -1,16 +1,16 @@
 .start {
-    width: max-content;
-    margin: 0 auto 0 50%;
-    padding-top: 11vh;
-    padding-left: 136px;
-    transform: translateX(-60%);
-    transition: 2s cubic-bezier(0.33, 0.15, 1, 0.24);
+    width: 60%;
+    margin: 0 20% 0 20%;
+    padding-top: 14vh;
+    /* transform: translateX(-65%); */
+    transition: 1s cubic-bezier(0.33, 0.15, 1, 0.24);
 
     /* transform: translateX(-60%) scale(600);*/
 }
 
 .start-logo {
     margin-bottom: 40px;
+    transition: 1s ease;
 }
 
 .start-title {
@@ -21,6 +21,7 @@
     color: rgb(32, 33, 36);
     margin-top: 0px;
     height: 30px;
+    transition: 1s ease;
 }
 
 .start-p {
@@ -28,6 +29,7 @@
     font-size: 0.95em;
     line-height: 1.6em;
     color: rgb(95, 99, 104);
+    transition: 1s ease;
 }
 
 .start-a {
@@ -35,7 +37,7 @@
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, sans-serif;
     line-height: 1.6em;
-    
+    transition: 1s ease;
 }
 
 .start-p-little {
@@ -44,6 +46,7 @@
     line-height: 1.6em;
     color: rgb(95, 99, 104);
     margin-bottom: 0;
+    transition: 1s ease;
 }
 
 .start-button {
@@ -55,6 +58,7 @@
     color: white;
     background-color: rgb(26, 115, 232);
     margin-top: 51px;
+    transition: 1s ease;
 }
 
 .glitch-up {
@@ -71,16 +75,12 @@ span {
     position: relative;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 480px) {
     .start {
-        margin: 0 auto 0 60%;
+        margin: 0 auto 0 10%;
+        width: 80%;
     }
-}
-
-@media screen and (max-width: 450px) {
-    .start {
-        margin: 0 auto 0 45%;
-        width: 80vw;
-        transform: translateX(-40%);
+    .start-title {
+        margin-bottom: 40px;
     }
 }
