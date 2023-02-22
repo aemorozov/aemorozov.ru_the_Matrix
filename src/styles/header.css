@@ -1,0 +1,27 @@
+.header-logo,
+.header-snake {
+  text-decoration: none;
+}
+
+.header {
+  background-color: black;
+  position: fixed;
+  transition: 0.3s ease;
+}
+
+.name {
+  top: 0;
+  left: 5%;
+  width: 78px;
+  box-shadow: 2px 5px 5px #999;
+  z-index: 10;
+}
+
+.logo {
+  padding: 5px;
+  color: #fff;
+}
+
+.header:hover {
+  background-color: #023;
+}

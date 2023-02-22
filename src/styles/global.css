@@ -1,0 +1,63 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono", monospace;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.container {
+  width: 100vw;
+  position: sticky;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  transition: 0.5s ease;
+}
+
+.border-top-gradient,
+.border-bottom-gradient,
+.border-top,
+.border-bottom {
+  position: fixed;
+  width: 100vw;
+  z-index: 5;
+}
+
+.border-top,
+.border-bottom {
+  background-color: #fff;
+}
+
+.border-top {
+  height: 60px;
+  top: 0;
+}
+
+.border-bottom {
+  height: 80px;
+  bottom: 0;
+}
+
+.border-top-gradient {
+  height: 10px;
+  top: 60px;
+  background: linear-gradient(to bottom, #fff, #ffffff00);
+}
+
+.border-bottom-gradient {
+  height: 10px;
+  bottom: 80px;
+  background: linear-gradient(to top, #fff, #ffffff00);
+}
+
+.ahref {
+  color: black;
+}
